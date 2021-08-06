@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- This is basically a way for us to tell the browser the following things
+        width=device-width -- set the view port width to actual device width - necessary for mobile browsers
+        initial-scale=1 -- set the initial zoom of the page to 1 or 100%
+
+        This helps us to control what are the defaults and then let us make the page responsive as needed
+    -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Responsive Web Design</title>
+    <style>
+
+      h1 {
+        font-size: 1.5rem;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        color: #005511;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .column {
+        background-color: lightpink;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      @media (min-width: 960px) {
+        .column {
+          width: 500px;
+          padding: 10px;
+          margin: 10px;
+        }
+        h1 {
+          font-size: 4rem;
+          color: red;
+        }
+      }
+    </style>
+</head>
+<body>
+<h1>
+  Welcome to Responsive Design
+</h1>
+<div class="container">
+  <div class="column column-1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cumque deserunt ducimus, incidunt iste laborum
+    laudantium magni quam quibusdam quidem rem repudiandae rerum, soluta suscipit totam veniam voluptatum. A, culpa?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio dolores ducimus et illum ipsa ipsum,
+    minus nihil nulla numquam odit officia possimus quisquam quo ratione tempore tenetur vel voluptates!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur dolor ex fugit illo iste magni minus,
+    molestias non odio officiis omnis pariatur quae quaerat quam quas quo, tempore temporibus!
+  </div>
+  <div class="column column-2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cumque deserunt ducimus, incidunt iste laborum
+    laudantium magni quam quibusdam quidem rem repudiandae rerum, soluta suscipit totam veniam voluptatum. A, culpa?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio dolores ducimus et illum ipsa ipsum,
+    minus nihil nulla numquam odit officia possimus quisquam quo ratione tempore tenetur vel voluptates!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur dolor ex fugit illo iste magni minus,
+    molestias non odio officiis omnis pariatur quae quaerat quam quas quo, tempore temporibus!
+  </div>
+</div>
+</body>
+</html>

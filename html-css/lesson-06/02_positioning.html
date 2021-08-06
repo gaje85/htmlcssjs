@@ -1,0 +1,126 @@
+<!--
+In this code snippet, we will take a look how we can position certain elements out of the normal layout flow and have
+them behave differently. We will achieve this with the help of the position css property.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Positioning</title>
+    <link rel="stylesheet" href="position-styles.css">
+</head>
+<body>
+<!--
+In our previous section we saw how float allows us to shift the position of certain elements from its default positions
+and allows us to provide a different layout. Similarly, we can make use of the position css property to shift or reposition
+certain elements from the regular normal layout flow.
+
+static, relative, absolute, fixed are some of the various options we have available with this attribute.
+
+we will have a specific set of elements with different position values applied to understand how they differ
+-->
+
+<!--
+Static positioning - this basically the default behavior for an element. Nothing special or fancy about it.
+-->
+
+<div class="static-pos">
+    <h1>Static positioning</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem eligendi excepturi ipsa iste laborum
+        molestiae obcaecati sint sunt totam. Deserunt distinctio dolore minima modi molestias ratione tenetur vero, voluptate.</p>
+
+    <p class="positioned">
+        This behaves like any other block element and has been positioned static. Makes no major difference
+
+    </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorem magnam quo repellendus ut. Assumenda aut
+        culpa debitis, hic illo ipsa iusto necessitatibus officia optio, sint suscipit unde veritatis vero!</p>
+
+    <p>
+        inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and
+        adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line
+        if possible — like this one containing text</span>,
+    </p>
+</div>
+
+<!--
+Relative positioning - Its similar to static positioning except that once the elements have been positioned as usual in the normal layout
+flow, we can modify the position with the help of other css properties like left, right, top, bottom. An element with position: relative but no other
+left, right, top, bottom properties will appear as normal
+-->
+
+<div class="rel-pos">
+    <h1>Relative positioning</h1>
+
+    <p class="dummy-relative-pos">This element has been positioned relative but with no other properties set on it, hence
+    it behaves like a statically positioned element</p>
+
+    <!-- The top and left properties that are set will push the element 30px from the top and left of the parent container.
+    The parent container in this case is .rel-pos
+    -->
+    <p class="relative-pos">
+        This element has been positioned relative with a some values set for top and left properties.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorem magnam quo repellendus ut. Assumenda aut
+        culpa debitis, hic illo ipsa iusto necessitatibus officia optio, sint suscipit unde veritatis vero!</p>
+
+    <p>
+        inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and
+        adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line
+        if possible — like this one containing text</span>,
+    </p>
+</div>
+
+<!--
+Absolute positioning - here the element that is marked as position: absolute, will no longer be in the normal layout flow
+and instead sits in its own layer separate from everything else. Now this element will be positioned in this layer with an offset
+as determined by the combination of top/left/right/bottom css properties that are set on the element.
+
+An absolutely positioned element is placed depending on the position property of the ancestor element. If there is no explicit position
+property in any ancestor element, then that means they are all statically positioned. So in such cases, the element is placed relative to the initial view port
+that is visible.
+
+This behavior can be tweaked further by setting position:relative to any of the ancestor elements that contains this absolutely placed
+element. These two points are key differentiators against fixed positioning.
+
+-->
+<!--
+    comment/uncomment the style attr below to see the difference in behavior for the absolutely positioned element
+-->
+<div class="abs-pos" style="position:relative;">
+    <h1>Absolute positioning</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci animi aspernatur corporis culpa,
+        cupiditate, facere iure nihil quae quia sit tempora ut veritatis. Dignissimos eum ex libero nam nisi!</p>
+
+    <p class="absolute-pos">
+        This element has been positioned absolute
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorem magnam quo repellendus ut. Assumenda aut
+        culpa debitis, hic illo ipsa iusto necessitatibus officia optio, sint suscipit unde veritatis vero!</p>
+
+    <p>
+        inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and
+        adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line
+        if possible — like this one containing text</span>,
+    </p>
+</div>
+
+<!--
+Fixed positioning - Its similar to absolute positioning in that the element is taken out of the normal layout flow but
+then in this case it fixes the elements position relative to the visible view port on the basis of the top/left/bottom/right
+properties
+-->
+<!-- Uncomment the below code and run to see where the fixed element is positioned
+Scroll the page and see how the element always ends up getting fixed to one place on the view port. In absolute positioning, the element
+would go out of the view when we start to scroll, but here it gets locked in.
+-->
+<div>
+    <h1 class="fixed-pos">Fixed positioning</h1>
+</div>
+
+
+</body>
+</html>

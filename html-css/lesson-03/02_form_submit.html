@@ -1,0 +1,82 @@
+<!--
+  In this code snippet we will attempt to do a form submission for via both a GET and POST request.
+  Caveat: We wont have an actual server to receive the request, but nonetheless, we will simply attempt to make a request to a non-existent server
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Submit</title>
+</head>
+<body>
+<!--
+  Lets go ahead and declare a form element with all attributes set on it
+  The form action attr accepts a url (Absolute or relative) and it refers to the url that the browser must make the request to
+  with the help of the HTTP verb (get/post) mentioned in the `method` attribute.
+-->
+
+<!--
+  when a form submit happens, the browser will take all the fields contained within the form
+  and prepare a payload to make a request. The payload will have the name attr of each field and the value of that corresponding field,
+  concatenated with an `=`. Several such field/value pairs will then be concatenated with an `&`.
+
+  name1=value1&name2=value2&name3=value3
+
+  This can be seen easily when the submit button is clicked.
+
+  Since this is GET request, the browser will basically make a request to the url in the form action attr asking for information and when it does that,
+   it also appends the form details as query param in the urls with a payload mentioned as above.
+
+  Note: This is not expected to work fully, since there is no working server on example.com to properly receive the request.
+  Its just an illustration to show how it works on the browser side of things.
+-->
+<form action="https://example.com/form-submit" method="get">
+  <!--
+    we will have to form fields email and password, similar to what we saw in previous code snippets
+   -->
+  <p>
+    <label for="email">Enter your email address</label>
+    <input type="text" id="email" name="email" value="test@gmail.com">
+  </p>
+  <p>
+    <label for="password">Enter your password</label>
+    <input type="password" id="password" name="password">
+  </p>
+  <p>
+  <!-- we will declare a button of type submit. What makes submit buttons special is that they automatically trigger a form submission
+    to the url mentioned in the action attr of the parent form element via the http verb given by the method attribute.
+  -->
+    <button type="submit">Submit Form</button>
+  </p>
+</form>
+<!--
+  In the case of a POST form submit,the form data payload is prepared with field names being the keys and their values being the actual values.
+  All the fields in the form are then put together as the body payload of the POST request and the data is sent to the URL given in the action attr.
+
+  Note: This is not expected to work fully, since there is no working server on example.com to properly receive the request.
+  Its just an illustration to show how it works on the browser side of things.
+
+  You can open the browser network tab and see the request being made to the server in question.
+-->
+<form action="https://example.com/form-submit" method="post">
+  <!--
+    we will have to form fields email and password, similar to what we saw in previous code snippets
+   -->
+  <p>
+    <label for="email1">Enter your email address</label>
+    <input type="text" id="email1" name="email" value="test@gmail.com">
+  </p>
+  <p>
+    <label for="password1">Enter your password</label>
+    <input type="password" id="password1" name="password">
+  </p>
+  <p>
+    <!-- we will declare a button of type submit. What makes submit buttons special is that they automatically trigger a form submission
+      to the url mentioned in the action attr of the parent form element via the http verb given by the method attribute.
+    -->
+    <button type="submit">Submit Form</button>
+  </p>
+</form>
+
+</body>
+</html>

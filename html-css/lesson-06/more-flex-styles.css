@@ -1,0 +1,50 @@
+
+.small-parent {
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 20px auto;
+    padding: 10px;
+
+
+    display: flex;
+    flex-direction: row;
+
+    /*
+        this is something we apply on the parent container
+        it helps us to set the flex items along the main axis
+
+        Try playing around with the possible values of justify-content and see how the behavior changes
+    */
+    justify-content: space-around;
+
+    /*
+        this is something we apply on the parent container
+        it helps us to set the flex items along the cross axis
+
+        Try playing around with the possible values of align-items and see how the behavior changes
+    */
+    align-items: center;
+
+}
+
+.item {
+    /* in this case, the items barely have any content, so we set a minimum width to make it look nicer */
+    min-width: 50px;
+    border: 1px solid #123456;
+
+    text-align: center;
+}
+
+/* Try commenting out the align-self properties below and see how it looks */
+.item-2 {
+    /*
+        Align-self lets us modify one specific flex items position on the cross axis
+        Try playing around with the possible values to understand how things change
+
+    */
+    align-self: flex-end;
+}
+.item-3 {
+    align-self: flex-start;
+}

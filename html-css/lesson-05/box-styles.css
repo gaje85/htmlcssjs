@@ -1,0 +1,61 @@
+/*
+    Based on the properties declared here
+    The actual total width of the box element would be 240px (5px + 15px + 200px + 15px + 5px)
+    The actual total height of the box element would be 190px (5px + 15px + 150px + 15px + 5px)
+
+    We dont consider the margin's width as part of the element width as its the space outside of the elements box itself
+
+    Now as you can see, while the math is simple addition, its not straightforward. The actual width of the element is
+    not the same as the width set on the css property (sadly!)
+
+    PS: This is the standard box model
+ */
+.box {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding: 15px;
+    border: 5px solid black;
+}
+
+/*
+    Wouldnt it be convenient if the actual width of the element is the same as the width defined on the css of the element?
+    We can achieve that by setting box-sizing: border-box on the element
+
+    Now the actual width/height of the border-box element is 200px wide and 150px height. The padding/borders space is
+    all within the same width/height of the element
+*/
+
+.border-box {
+    box-sizing: border-box;
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding: 15px;
+    border: 5px solid black;
+}
+
+/*
+    Another minor thing to look at since we are talking about margins/paddings and such is the concept of margin collapsing.
+
+    If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin,
+    which is the size of the largest individual margin. If one margin is negative, the amount of negative value will subtract
+    from the total. Where both are negative, the margins will collapse and the largest value will be used.
+*/
+
+.container {
+    border: 5px solid red;
+}
+
+.container .one, .container .two {
+    border: 5px solid blue;
+    background-color: grey;
+}
+/* Due to margin collapsing, the margin between para 1 and 2 would be 50px and not 80px */
+.container .one {
+    margin-bottom: 50px;
+}
+
+.container .two {
+    margin-top: 30px;
+}

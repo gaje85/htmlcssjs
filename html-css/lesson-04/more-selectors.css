@@ -1,0 +1,90 @@
+/*  This file has examples for descendant selectors, child selectors,
+    pseudo-classes */
+
+/*
+    Pseudo classes help target certain states of elements
+    - They could be the first element of a type
+    - Or could be when a mouse is hovered over the element
+
+    Pseudo classes typically start with a colon (:)
+    :pseudo-class-name
+
+*/
+
+p {
+    font-size: 20px;
+}
+
+/*
+    :first-of-type and :last-of-type allows us to select the first and last element of a particular type amongst a group of elements
+    all under the same parent element.
+
+    In our case, the root element is a div element with a h2 and p tags are children.
+    Here the first and last h2 element is the only h2 element in the group.
+    Here the first and last p elements are the p tags with Para 1 and Para 3 in them respectively.
+
+*/
+
+h2:first-of-type {
+    color: red;
+}
+
+h2:last-of-type {
+    background-color: yellow;
+}
+
+p:first-of-type {
+    color: green;
+}
+
+p:last-of-type {
+    background-color: aqua;
+}
+
+/*
+    :first-child and :last-child allow us to select the first (or last) element immediately within a parent element.
+    It is less specific than first-of-type or last-of-type in that, it only matches if its the first child or last child.
+
+*/
+
+h2:first-child {
+    border: 5px solid black;
+}
+
+/*  This doesnt get applied - because for the root element of div the last child is not a h2 */
+h2:last-child {
+    text-align: right;
+}
+
+p:last-child {
+    border: 2px dashed black;
+}
+
+/*
+    :hover is only applicable when the user hovers the mouse over the element
+*/
+
+a:hover {
+    color: pink;
+}
+
+/* This is an example of a descendant selector
+    A descendant selector allows us to say that a certain element or class or id under a certain element or class or id has to have
+    this style. The whitespace between the body and h1 is the descendant selector here.
+
+    In this case all h1 tags under a parent tag of body (no matter how far nested within the body) will have the style given here
+*/
+body h1 {
+    font-family: "Comic Sans MS", Arial, sans-serif;
+}
+
+/*
+    This is an example of child selector.
+    A child selector allows us to select an element which is an immediate child of a parent
+    In this case, the h1 tag immediately as a child of the body tag is only selected.
+
+ */
+
+body > h1 {
+    color: magenta;
+}

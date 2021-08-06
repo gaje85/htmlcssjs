@@ -1,0 +1,72 @@
+<!--
+  In this code snippet, we will see various ways of displaying text content in a HTML page.
+  There maybe limited comments here, as most of the code snippets are pretty self-explanatory
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text in HTML</title>
+</head>
+<body>
+  <!-- h1-h6 are heading tags meant to display headings. h1 is biggest to h6 the smallest -->
+  <h1>Displaying text content in HTML</h1>
+  <h2>Displaying text content in HTML</h2>
+  <h3>Displaying text content in HTML</h3>
+  <h4>Displaying text content in HTML</h4>
+  <h5>Displaying text content in HTML</h5>
+  <h6>Displaying text content in HTML</h6>
+
+  <!--
+    The above heading tags behave a certain way in terms of appearance. They also have another important role - they provide proper
+    semantic meaning to the content they display. While we could have a div or span element styled with css to make it look like a H1 tag, but
+    it wont have the same semantic meaning to something like say a screen reader which is reading the text and so on.
+   -->
+
+    <!--  p tags are meant to display a paragraph of text -->
+    <p>
+        This is paragraph. It can contain multiple lines inside of it.
+    </p>
+    <p>
+      This is another paragraph. Typically 2 paragraph elements have sufficient space between them.
+    </p>
+
+    <!-- Next are lists - ordered lists <ol> and un-ordered lists <ul> -->
+  <ul>
+      <li>apple</li>
+      <li>orange</li>
+      <li>grapes</li>
+      <li>banana</li>
+  </ul>
+
+  <ol>
+      <li>apple</li>
+      <li>orange</li>
+      <li>grapes</li>
+      <li>banana</li>
+  </ol>
+
+    <!-- In some cases, we may want the text to be displayed as a superscript or subscript   -->
+
+    <p>This is a superscript example, X<sup>2</sup></p>
+    <p>This is a subscript example, LOG<sub>10</sub></p>
+
+    <!-- Text can be made bold and italicized -->
+
+    <b>This text is bold</b>
+    <i>This is now italicized</i>
+
+    <!--
+        br tag is meant to introduce a line break in html.
+        Try commenting out the br tag and see what happens.
+     -->
+    <br>
+    <!--
+        Text can also be made strong and emphasized.
+        While it looks similar in output to the <b> and <i> tags, the key difference is it has semantic meaning in HTML5,
+        meaning it gives a strong message or an emphasized message to the content they wrap in for situations like screen readers and such.
+    -->
+    <strong>This text is made strong</strong>
+    <em>This is now emphasized</em>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!-- In this code snippet, we will take a quick look at 4 of the most commonly used units for css values -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Values and Units</title>
+    <style>
+        .pixels {
+            font-size: 24px;
+        }
+
+        .em {
+            font-size: 16px;
+        }
+
+        .para-one {
+            font-size: 1.5em;
+        }
+
+        .rem {
+            font-size: 20px;
+        }
+
+        .para-three {
+            font-size: 2rem;
+        }
+
+        .percent {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+        .box-one {
+            width: 25%;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .box-two {
+            width: 50%;
+            height: 120px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Defining values with px (pixels) - absolute units of measure -->
+<h1 class="pixels">Checkout this page on CSS values and notes</h1>
+
+<!--
+    Defining values with em - when a unit is defined with em, say 2em for font-size, it basically means 2 times the
+    font-size of the parent element
+-->
+<div class="em">
+    <p class="para-one">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam aspernatur atque debitis doloribus,
+        eligendi fugiat ipsa minima modi nam nesciunt odio quisquam rem repellat repellendus reprehenderit saepe ullam velit.
+    </p>
+    <p class="para-two">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam aspernatur atque debitis doloribus,
+        eligendi fugiat ipsa minima modi nam nesciunt odio quisquam rem repellat repellendus reprehenderit saepe ullam velit.
+    </p>
+</div>
+
+<!--
+    Defining values with rem - when a unit is defined with rem, say 2rem for font-size, it basically means 2 times the
+    font-size of the root html element, which is <html> tags font-size
+
+    rem is more favored than em and other units especially for things like font-sizes
+-->
+
+<div class="rem">
+    <p class="para-three">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam aspernatur atque debitis doloribus,
+        eligendi fugiat ipsa minima modi nam nesciunt odio quisquam rem repellat repellendus reprehenderit saepe ullam velit.
+    </p>
+    <p class="para-four">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam aspernatur atque debitis doloribus,
+        eligendi fugiat ipsa minima modi nam nesciunt odio quisquam rem repellat repellendus reprehenderit saepe ullam velit.
+    </p>
+</div>
+
+<!--
+    Defining values with percentage - when a unit is defined with a percentage, say 50% for width, it basically means
+    50% of the size of the parent element.
+-->
+
+<div class="percent">
+    <div class="box-one"></div>
+    <p class="box-two"></p>
+</div>
+</body>
+</html>

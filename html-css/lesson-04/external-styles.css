@@ -1,0 +1,31 @@
+/*
+    This is an external stylesheet. Its nothing but a separate stylesheet in which we define all the necessary styles and
+    attach it to the HTML file, so that the styles defined here are applied to the HTML elements on the page
+ */
+h1 {
+    border: 1px solid #654321;
+    /*
+        Here for the padding property, we have set of 4 values: top right bottom left.
+        This is known as shorthand properties. This the same as declaring the following rules:
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+
+        The border property used above is one such shorthand property as well.
+        border-width: 1px;
+        border-style: solid;
+        border-color: #654321;
+    */
+
+
+    padding: 10px 20px 20px 20px;
+}
+/*
+ - css properties and values are case-sensitive
+ - invalid css properties/values are ignored
+*/
+p {
+    font-size: 24px;
+    color: #123456;
+}

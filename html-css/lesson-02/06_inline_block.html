@@ -1,0 +1,43 @@
+<!--
+  In this code snippet, we will take a look 2 general categories of elements in HTML
+  - Block elements
+  - Inline elements
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline & Block Elements</title>
+</head>
+<body>
+<!--
+    Block elements have the following characteristics
+    - they start with a new line, meaning they have a line space before them always; they break from the regular flow of content
+    - they take up the entire width of the available - its full wide left-to-right
+    <p> & <div> are good examples of block elements
+-->
+
+<p style="background-color: lightblue; border: 1px solid red;">
+    This tag is a block element. It takes up the entire width of the page for that line.
+</p>
+
+<!-- Similarly a div element is block level as well-->
+<div style="background-color: lightblue; border: 1px solid red;">
+    This div is also block element. It takes up the entire width of the page for that line.
+</div>
+
+<!--
+    Inline elements have the following characteristics
+    - does not start in a new line; they dont break from the regular flow of content
+    - only take up space bounded by the tags of the element.
+
+    Technically the specs say you should not declare a block element within an inline element, however, practically that doesnt cause an issue.
+    Still its recommended not to that, and it'd be better as well, as browsers can potentially change the implementation in the future to match the spec
+    and your html layout may break then
+-->
+<p>
+    In this big para of text, this <span style="background-color: lightcoral">span of text is alone inline</span>
+</p>
+</body>
+</html>

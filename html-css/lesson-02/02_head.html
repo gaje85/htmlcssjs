@@ -1,0 +1,68 @@
+<!-- We will explore a little more in detail about things that happen in the head tag -->
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    There is a only one HEAD tag per HTML page. If head is not explicitly declared then most browsers will add one by default.
+-->
+<head>
+    <!--
+        meta tag  typically contains metadata about the page created. In this case, the charset attribute is being
+        set to let the page know that all UTF-8 (unicode) characters are to supported. This should support all characters in the world in all languages
+        This is also optional. But depending on your usecase, you may find its better to declare it.
+    -->
+    <meta charset="UTF-8">
+    <!--
+        The meta tag can also have `name` and `content` attributes.
+        The name would specify the type of meta element and the content would have the actual metadata content
+
+        Below are 2 examples - the author and description of the page are defined via the meta tag. This info is used
+        in a variety of ways - from basically telling the ownership details of the page, to CMS systems and for SEO purposes
+    -->
+    <meta name="author" content="John Doe">
+    <meta name="description" content="This page is a quick tutorial for the header tag">
+    <!--
+        Homework - When we paste links from youtube or other sites into facebook posts or twitter - there appears a
+        preview of the image or link there in facebook/twitter - how does this happen? Try to figure this out.
+        Hint: Its related to the meta tag
+    -->
+
+    <!--
+        The link tag helps link the current page with another external resource/file. Most common use cases are to load
+        the favicon and the stylesheets of the page
+     -->
+    <!--
+        Below loads a favicon which is what we see on the browser tabs or when a page is book marked.
+        Typically the href refers to a .ico file in the root of the server
+    -->
+    <link rel="icon" href="favicon.ico">
+
+    <!--
+        Below loads an external stylesheet. href attribute can point to a resource in the same server or an external url
+    -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+        script tags can also be present where they load external java script files.
+        Typically when a script is attached in the head, it will stop the parsing of the html file, load the entire JS file,
+        parse and run the JS file and then resume with subsequent lines in the HTML page. This is fine unless your JS code relies on the presense of certain
+        HTML elements, in which case the script running will fail. To prevent this issue, a couple of years ago, we would load the script tags from the end of the body tag.
+        This way the entire html file would have already been parsed and then we would load the JS code.
+
+        However, with the introduction of the defer attribute, this problem is solved easier. The defer attribute will ensure that the
+        JS script gets loaded without blocking the execution of the remaining HTML code. Once the HTML page elements in the body have been parsed fully, the JS is run.
+        This way we dont face the issue of certain HTML elements not being present.
+        Some neat tutorials I found on this topic -
+        https://zellwk.com/blog/javascript-async-and-defer/
+        https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
+    -->
+    <!-- Try running the same html file with and without the defer attribute removed and check the browser console for difference.    -->
+    <script src="sample-script.js" defer></script>
+    <!--
+        The title tag is used to set the title of the page, used by browsers on the browser tabs and when the page is bookmarked.
+    -->
+    <title>Header Tutorial</title>
+</head>
+<body>
+<h1>This is the page header text</h1>
+</body>
+</html>

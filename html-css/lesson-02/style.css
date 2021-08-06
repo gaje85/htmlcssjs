@@ -1,0 +1,4 @@
+/* For now assume that this css rule, simply makes all h1 text appear red in color */
+h1 {
+    color: red;
+}

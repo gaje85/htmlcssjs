@@ -1,0 +1,44 @@
+<!-- We will take a look at how images and some other media types can be loaded in a html page in this code snippet -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Madness</title>
+</head>
+<body>
+<!--
+    Images can be placed in a page via the HTML tag
+    Typically you'd supply the url to the image - either a local file system path or a remote url via the src attribute
+    The alt attribute is meant to provide an alternate text that is displayed if the image does not load up or if loading is delayed.
+    It helps with screen readers for accessibility.
+-->
+<!--
+The title attribute helps provide a hover text. Width/height modify the height of the displayed image. Not recommend to set width/height as it may
+make the image look distorted
+-->
+<img src="indian-flag.png"
+     alt="Indian Flag"
+     title="This is the Indian flag"
+     width="400"
+     height="400"
+>
+
+<br>
+
+<!--  The video tag allows us to embed video content on the HTML page and provide playback support for the video -->
+<!-- src should refer to the file path either on the file server or a remote url -->
+<!-- control attr determines if the player controls are visible or not -->
+<video src="rabbit320.webm" controls>
+    <!-- This paragraph tag is fallback content that is shown when the the video cant be played in the browser    -->
+    <p>Your browser seems to not support HTML5 video playback. Click <a href="rabbit320.webm">here</a> to download the file.</p>
+</video>
+
+<video controls>
+    <!-- This is an alternate approach for listing file sources   -->
+    <source src="rabbit320.webm" type="video/webm"/>
+    <!-- This paragraph tag is fallback content that is shown when the the video cant be played in the browser    -->
+    <p>Your browser seems to not support HTML5 video playback. Click <a href="rabbit320.webm">here</a> to download the file.</p>
+</video>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--
+    In this module we will take a look at normal flow layout and block/inline elements behave in such cases.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Display properties</title>
+    <link rel="stylesheet" href="display-styles.css">
+</head>
+<body>
+<!--
+    Lets take a quick look at the below block of html to understand what we mean by normal flow layout
+-->
+<div class="normal-layout">
+    <h3>This is entire section is a normal layout</h3>
+    <p>
+        Here the elements are laid out one after the other. Just as they are placed in the HTML code.
+        Elements that appear one after the other are <i>block</i> elements. Like the header tag and the paragraph tags.
+        Elements that appear next to each other, like the text in a paragraph are all <i>inline</i> elements.
+        <br>
+        We have already seen about block & inline elements before. The point being these elements automatically enforce
+        and provide this layout just like that. You dont have to do anything about it.
+        <br>
+        In most cases, like text displays or forms, this normal layout is the basic layout that you'd want (perhaps some
+        styling tweaks at best). For more complex layout, you'll have to modify and adjust this normal layout with other
+        options we will see below.
+    </p>
+
+    <ul>
+        <li>First, the header tag is laid out</li>
+        <li>Then the paragraph tag</li>
+        <li>Finally its the unordered list</li>
+        <li>Finished with another paragraph tag next</li>
+    </ul>
+
+    <p>The end!</p>
+</div>
+
+<!--  The thing with css is we can change when and how an element behaves block and inline
+For example, the list below should ideally be one after the other like block elements, but due to the display: inline being set
+on the li elements, its all next to each other
+-->
+<div class="normal-layout-mods">
+    <p>here the list below should have been ordered one after the other in new lines but they are not because we changed the display property</p>
+<ul>
+    <li>first element</li>
+    <li>second element</li>
+    <li>third element</li>
+</ul>
+</div>
+</body>
+</html>

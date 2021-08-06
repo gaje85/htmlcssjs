@@ -1,0 +1,41 @@
+.static-pos, .rel-pos, .abs-pos {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+p {
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.static-pos .positioned {
+    /* This is redundant as by default an element is static */
+    position: static;
+    background-color: mediumvioletred;
+}
+
+.rel-pos .dummy-relative-pos {
+    position: relative;
+}
+
+.rel-pos .relative-pos {
+    position: relative;
+    background-color: mediumvioletred;
+    top: 30px;
+    left: 30px;
+}
+
+.abs-pos .absolute-pos {
+    position: absolute;
+    background-color: mediumvioletred;
+    top: 50px;
+    left: 25px;
+}
+
+.fixed-pos {
+    position: fixed;
+    background-color: mediumvioletred;
+    top: 25px;
+    left: 25px;
+}

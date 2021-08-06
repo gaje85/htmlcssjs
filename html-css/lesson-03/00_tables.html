@@ -1,0 +1,105 @@
+<!-- We will take a quick look at how we can build HTML tables in this code snippet -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tables</title>
+    <link rel="stylesheet" href="table-styles.css"/>
+</head>
+<body>
+<!--
+    Tables are one of the cleanest and straight forward ways of displaying tabular information.
+    A typical HTML table consists of a grid of rows and columns. These tables may or may not have headings for them.
+    Tables can be styled with CSS to make them more presentable and readable. However, we wont be dealing with much css.
+    To make things simple, we will use a simple stylesheet already prepared for learning purposes.
+
+    Note: An important thing to keep in mind is - tables are not meant to layout web pages, they are meant to display tabular info.
+    In days past, when layouts were difficult to achieve with the HTML/CSS of the day, people used to force fit tables to achieve the necessary
+    layouts that they had wanted. But that's a bad idea, as semantic a table is not meant for that. This is even more confusing people who read your
+    web page with screen readers and other accessibility tools to whom the whole page would be read as a table without actually meaning that in any way.
+-->
+
+<!-- A typical table will have a <table></table> tag at the start and end -->
+<table>
+    <!-- We then define a row in the table with the help of <tr></tr> tags  -->
+    <tr>
+        <!-- Each cell in a table is defined with the help of the <td></td> tags -->
+        <td>I am your first cell</td>
+        <td>I am your second cell</td>
+        <td>I am your third cell</td>
+    </tr>
+    <tr>
+        <td>This is the first cell in the 2nd row</td>
+        <td>This is the second cell</td>
+        <td>This is the third cell</td>
+    </tr>
+</table>
+
+<br><br>
+<!-- Now lets build another table but this time with nice headers for each column. We can do that with the help of the <th></th> tag -->
+<table>
+    <!-- The headers are still a row and hence need a <tr></tr> tag around them  -->
+    <tr>
+        <!-- These are the actual headers defined for this table now with <th>   -->
+        <th>Name</th>
+        <th>Places</th>
+        <th>Animals</th>
+    </tr>
+    <tr>
+        <td>Ramesh</td>
+        <td>Chennai</td>
+        <td>Dogs</td>
+    </tr>
+    <tr>
+        <td>Suresh</td>
+        <td>Bangalore</td>
+        <td>Cats</td>
+    </tr>
+    <tr>
+        <td>Mahesh</td>
+        <td>Delhi</td>
+        <td>Horses</td>
+    </tr>
+</table>
+
+<!--  Sometimes, in tables we would want to merge a couple of cells and display them together. The cells maybe merged across
+    rows or across columns. TO achieve this we can make use of 2 attributes: colspan and rowspan
+
+    They can be applied on either the th or td tags of a table
+-->
+<br><br>
+<!-- Lets build a mock table where we see count of men and woman in various age categories-->
+<table>
+    <tr>
+        <!-- You can have blank cells by defining a th or td and leaving it empty    -->
+        <th></th>
+        <!-- This table header cell will span across 2 columns hence has a colspan of 2   -->
+        <th colspan="2">Age of 10-25</th>
+        <th colspan="2">Age of 26-50</th>
+        <th colspan="2">Age of 51-75</th>
+    </tr>
+    <tr>
+        <!-- This table cell will span across 2 rows hence has a rowpan of 2   -->
+        <td rowspan="2">Gender Categories</td>
+        <td>Men</td>
+        <td>Women</td>
+        <td>Men</td>
+        <td>Women</td>
+        <td>Men</td>
+        <td>Women</td>
+    </tr>
+    <tr>
+        <td>45</td>
+        <td>54</td>
+        <td>34</td>
+        <td>43</td>
+        <td>67</td>
+        <td>76</td>
+
+    </tr>
+</table>
+
+
+
+</body>
+</html>

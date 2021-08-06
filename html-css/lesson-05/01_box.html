@@ -1,0 +1,42 @@
+<!-- In this code snippet we will take a look at the CSS box model and why its important and needed for us to know -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model</title>
+    <!--  Take a look at this stylesheet -->
+    <link rel="stylesheet" href="box-styles.css">
+</head>
+<body>
+<!--
+CSS Box model is a basically applicable an imaginary box present around most elements and their contents.
+It has various parts such as
+
+Content box: The area where your content is displayed, which can be adjusted through properties like width and height.
+Padding box: The padding sits around the content as white space; its size can be controlled using padding and related properties.
+Border box: The border box wraps the content and any padding. Its size and style can be controlled using border properties
+Margin box: The margin is the outermost layer, wrapping the content, padding and border as whitespace between this box and other elements. Its size can be controlled using margin and related properties.
+
+The image below will visually show the box model
+-->
+
+<img src="box-model.png" alt="Box Model Image">
+
+<div class="box">
+    This is a box which is a block element.
+    It follows the standard box model.
+
+</div>
+
+<div class="border-box">
+    This is a box which is a block element.
+    It follows the alternate box model.
+</div>
+
+
+<div class="container">
+    <p class="one">Paragraph 1</p>
+    <p class="two">Paragraph 2</p>
+</div>
+</body>
+</html>

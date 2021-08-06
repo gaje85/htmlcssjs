@@ -1,0 +1,45 @@
+/* CSS at its very basics is a rule based language. You define the rules of styles that are to be applied to a particular element
+ or a group of elements and.
+
+ CSS can be used to change the color and size of a text, or it can be used to create a layout or for doing animations on
+ the web
+
+ */
+
+
+/*
+ Every rule starts with a css selector - A selector is meant tell which HTML element to apply the style defined within.
+ In this case, it ought to be for all H1 tags on the page
+
+ The {} are meant to hold all the various css properties to be applied on the selector
+ Within the selector, you will have 1 or more declarations in the form of property and value pairs
+
+ property: value
+ Eg.
+ color: red
+
+ There are multiple kinds of values, but we will see them later as we come across more about CSS.
+ But the basic idea is different css properties have different kinds of values.
+
+ */
+
+
+/*
+    Here we select all H1 elements in the page
+    and apply a color of red for the text with font size of 16 pixels
+*/
+h1 {
+    color: red;
+    font-size: 16px;
+}
+
+/*
+    We select all p tags and apply a color of #00000F (blue) color. Here we specify color via the hexadecimal RGB scheme.
+    There are several other such options for applying color.
+
+    We also set the border for the paragraph to be 1px wide, solid line and a red color specified with the help of rgb() function
+*/
+p {
+    color: #0000FF;
+    border: 1px solid rgb(256, 0, 0);
+}

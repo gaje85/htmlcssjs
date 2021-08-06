@@ -1,0 +1,12 @@
+/* We set a style for all table elements, where the borders are to collapsed together. If doesnt make sense to you, try removing the below style
+and see how it appears
+*/
+table {
+    border-collapse: collapse;
+}
+
+/* We also set a nice looking border for the cells of the table with sufficient padding in them */
+td, th {
+    padding: 10px 20px;
+    border: 1px solid rgb(190,190,190);
+}

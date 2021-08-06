@@ -1,0 +1,132 @@
+<!-- In this code snippet, we will take a look at various form elements that we can use to accept inputs from a user -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Elements</title>
+</head>
+<body>
+<!-- Form elements are basically various kinds of elements through which we can accept different kinds of inputs from a user -->
+
+<!--
+    Typically form elements are contained within a parent <form> tag.
+    This is not necessary always, but a typical HTML form would have a <form> tag as the root of the form elements
+
+    Forms can have single line text fields, multi-line text fields, dropdowns, buttons, checkboxes or radio buttons.
+-->
+
+<!-- A form element is what defines a form - its the basic container element for web forms
+    it accepts to 2 attrs - action and method. We will see them in detail a little later
+ -->
+<form>
+    <p>
+        <!--   A label tag is a way for us to set a valid label for a form element. It tells the user what input or action
+                they are expected to do for that field. The for attribute in the element is mapped to the id value of the field
+                we intend to have as label
+        -->
+        <label for="email">Enter your email address</label>
+        <!--
+              This is a input element of type text meant for accepting single line input. By default, there are no limits on the length of the string
+              given as input here. We define an id attr so that we can pair it as needed with the corresponding label tag.
+              The name attr is necessary for when we do form submission, we will take a look at this in a later snippet.
+              The value attr is current/default value of the field which we can set.
+
+              Some attributes like type, name, id and value are common for a lot of form elements. Take a look at the docs online for more in-depth information.
+         -->
+        <input type="text" id="email" name="email" value="test@gmail.com">
+    </p>
+    <p>
+        <label for="password">Enter your password</label>
+        <!--  An input of type password is specifically for handling password fields. It will obfuscate the input that is entered   -->
+        <input type="password" id="password" name="password">
+    </p>
+    <p>
+        <label for="description">Enter a description</label>
+        <!--
+          A text area is a way to accept multi-line input. We set a valid id and name on it. It also accepts rows and cols attrs
+          which are meant to tell how many lines of text and how many cols of chars in a row are to be displayed by default.
+        -->
+        <textarea id="description" name="user_desc" rows="3" cols="50"></textarea>
+    </p>
+
+    <p>
+        <!--
+            A button is a form element to display something which is clickable by the user for performing a particular action.
+            The type attr is typically a button type which is generic button type. It can be used for almost all use cases.
+            the type submit is typically used for telling the browser that the values from the form that the button is part of is to be submitted to
+            a url on the basis of the attrs set on the form elements action and method. We will see more on this later.
+         -->
+        <button type="button">Submit Form</button>
+    </p>
+</form>
+
+<br><br>
+
+<form>
+    <!-- An input type of hidden is basically a HTML element which is never visible to the user but is present in the form. It can
+        be used to store values that you dont want the user to see or be made aware of.
+    -->
+    <input type="hidden" id="hidden_secret" name="secret" value="This is my secret">
+
+    <!-- Checkboxes allow the user  to choose between multiple values how many ever they choose -->
+    <p>Select fruits you like:</p>
+    <p>
+        <!-- Labels can be defined similar to any other input type   -->
+        <label for="apples">Apples</label>
+        <!--
+            A checkbox typically has a type of checkbox. Amongst all the similarly grouped checkboxes, the  name attr is shared or
+            rather the values are tied to one same name attribute. The value attribute holds what value you want that particular checkbox to have.
+
+            If you wish, you can make a particular checkbox already selected with the help of the `checked` attr
+         -->
+        <input type="checkbox" id="apples" name="fruits" value="apples" checked>
+    </p>
+    <p>
+        <label for="oranges">Oranges</label>
+        <input type="checkbox" id="oranges" name="fruits" value="oranges">
+    </p>
+    <p>
+        <label for="grapes">Grapes</label>
+        <input type="checkbox" id="grapes" name="fruits" value="grapes">
+    </p>
+
+    <!--
+        Radio buttons allow the user to pick only 1 value amongst a group of values.
+    -->
+    <p>Select your gender:</p>
+    <p>
+        <input type="radio" id="male_gender" name="gender" value="male_gender">
+        <label for="male_gender">Male</label>
+    </p>
+    <p>
+        <input type="radio" id="female_gender" name="gender" value="female_gender">
+        <label for="female_gender">Female</label>
+    </p>
+    <p>
+        <input type="radio" id="other_gender" name="gender" value="other_gender">
+        <label for="other_gender">Other</label>
+    </p>
+
+    <!--
+        Dropdowns are another form element which we can use to let the user pick a value from a list while taking up too
+        much space on the web page.
+
+        For dropdowns, we use the <select> tag, a deviation from the usual input tags that we have seen so far.
+     -->
+
+    <p>
+        <label for="fruit-bowl">Pick a fruit from the dropdown:</label>
+        <!--  We apply an id and a name for the select tag. For the options to be shown in the dropdown, we use
+              the aptly named <option> elements. One of the options can be auto selected with the `selected` attribute
+
+              This has a similar outcome as the radio button, but it takes up much lesser space on a web form
+        -->
+        <select id="fruit-bowl" name="fruit-bowl">
+            <option>Apples</option>
+            <option selected>Oranges</option>
+            <option>Grapes</option>
+        </select>
+    </p>
+</form>
+</body>
+</html>

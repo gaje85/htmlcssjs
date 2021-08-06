@@ -1,0 +1,67 @@
+<!-- In this code snippet we will see how to attach CSS in various ways to HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attaching Stylesheets</title>
+    <!--
+        External stylesheets are one the most used ways of attaching styles to HTML.
+        The value in the href attr can be a file in the same folder or a sub-folder or any such location.
+        It can also be a remote server.
+    -->
+
+<!--    <link rel="preload" href="external-styles.css" as="style"/>-->
+    <link rel="stylesheet" href="external-styles.css" />
+
+    <!--
+        The style tag allows us to load internal stylesheets, meaning styles that are defined in the same file as
+        the HTML.
+        Convenient for when you dont want to load an external stylesheet or its not possible for any number of reasons.
+        However, to reuse styles across multiple pages, you will have to copy the styles into each file.
+
+        In the case, of an external stylesheet, simply linking the style via link tag is sufficient
+    -->
+    <style>
+        p {
+            background-color: #AEF;
+            font-family: "Comic Sans MS", Arial, sans-serif;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+    <!--
+        Inline styles are where we declare some styles that are applicable only to that HTML element.
+        Typically, we should avoid inline styles where possible.
+        - its tough to maintain
+        - making a style change for say the H1 tags on page (when there are more than 1 H1 tags), might entail a change across
+        each of those tags individually
+
+        Now what happens when there are multiple styles applied to a html element in multiple places?
+        For example, the h1 tag here has styles defined inline and as well as in the external stylesheet
+        the p tag has styles defined in the internal as well as external stylesheet.
+
+        All this is dependent on 2 things: specificity and cascade. We will see about them in later lessons, but know for now
+        that there is some rules present on the basis of which this works.
+    -->
+    <h1 style="color: red;">Ways of Applying Styles to HTML</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa illo quod suscipit.
+        Ea esse eveniet hic molestias, nam nisi odit quam sed totam ut. Dolore dolorem doloremque porro quas suscipit.
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, beatae commodi consequatur culpa dolore facere harum incidunt laboriosam,
+        odit omnis repellendus repudiandae sit! Deleniti enim error iure officiis tempora velit.
+
+    </p>
+    <!--  The styles defined for p tag in internal/external stylesheets are applicable for all the tags present on this page.   -->
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa illo quod suscipit.
+        Ea esse eveniet hic molestias, nam nisi odit quam sed totam ut. Dolore dolorem doloremque porro quas suscipit.
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, beatae commodi consequatur culpa dolore facere harum incidunt laboriosam,
+        odit omnis repellendus repudiandae sit! Deleniti enim error iure officiis tempora velit.
+
+    </p>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!-- These are HTML Comments - you will find the files to have quite a few of them for explaining what the code does -->
+
+<!-- Comments can either be single line -->
+
+<!--
+  Comments can also be multi-line.
+  Use it as necessary.
+-->
+
+You can simply place a line of text in a HTML file and it'll load up just fine! There wont be any issue at all.
+HTML tends to be very forgiving
+
+<!-- A typical HTML element/tag will have an opening tag, corresponding closing tag, and the actual content enclosed within the tags -->
+<p>The quick brown fox jumps over the lazy dog</p>
+
+<!--
+There can also be some elements in HTML which dont have such open and closing tags, there are called
+empty elements or standalone elements
+-->
+<input type="text"/>
+
+<!--
+    HTML elements can also have additional information which are typically not displayed in the content.
+    They are called attributes. In the below example, the word type below is an attribute, more specifically the attribute name
+    where the value within quotes is called attribute value
+
+    Typically, attributes have a name followed by the `=` sign, followed by a value in a pair of single or double quotes.
+    Mostly double quotes are preferred standards, but both will work fine.
+-->
+
+<a href="https://www.google.com" target="_blank">Click here</a>
+
+<!--
+    There can also be certain attributes for which the value is optional or dont have any values at all. They are called
+    Boolean attributes.
+
+    Typically boolean attributes take the same value as the name. Alternatively, they can be ignored as well
+ -->
+
+<input type="text" disabled="disabled">
+<input type="text" disabled>
+
+<!-- Tags are usually nested as well. Do make sure that the corresponding pairs of tags have been closed always, or
+    there can be unintended consequences
+-->
+
+<p>
+    The quick brown fox <em>jumps</em> over the lazy dog
+</p>
+
+<!-- Another thing to keep in mind with HTML is newlines and white-spaces in the files are not honored when the HTML is rendered in the browser -->
+
+<p>
+    The quick brown fox jumps
+    <!-- The new lines and white-spaces are ignored and the line renders normally -->
+
+    over     the     lazy       dog
+</p>
+
+<!-- In HTMl <, >, ", ' are special characters that are part of the HTML syntax itself. If we need to use them in HTML content and not
+ have them interpreted as part of the syntax, we do so via something called entity references.
+ For example,
+ < can be referred by &lt;
+ > can be referred by &gt;
+ " can be referred by &quot;
+ ' can be referred by &apos;
+
+ This is not an exhaustive list, so try to google for the remaining items in the list
+ -->
+
+<p>
+    <!-- The <p> tag will end up getting rendered instead of appearing as text  -->
+    <p> tags are used to define a para in HTML
+</p>
+
+<p>
+    <!-- The <p> tag will not get rendered now  -->
+    &lt;p&gt; tags are used to define a para in HTML
+</p>

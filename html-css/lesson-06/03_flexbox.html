@@ -1,0 +1,84 @@
+<!-- Flexbox is one the most important and useful layout schemes that you can use to achieve your layouts
+ Below code snippet will explain the basics of flexbox layout
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="flex-styles.css">
+</head>
+<body>
+<!--
+Flex has a lot of css properties involved, so it might be over-whelming if we explore all of them.
+To get our basics right - we will look at the following properties. You can study & apply the remaining flex properties as you
+get more comfortable with flex and css in general. Some possible values for the properties below may have been omitted for
+ease of learning. Always refer the official MDN guide for full list.
+
+- display: flex;
+- flex-direction: row/column;
+- justify-content: flex-start/flex-end/center/space-between/space-around;
+- align-items: stretch/flex-start/flex-end/center;
+- flex-wrap: no-wrap/wrap;
+
+Typically we apply flexbox layout in the following manner
+- We would have a wrapper container or parent container
+- We would have elements we want to layout in a specific manner contained within the wrapper container
+- We apply the some flex properties on the parent element and some flex properties on the child element
+
+
+Some terminology to be comfortable with (Refer flex_model.bmp in this folder)
+- flex container  / flex item - Parent container and the children inside them
+- Main axis - main axis start / main axis end - Its the axis in which the flex items
+are being laid out. When the flex items are laid out on a row, then its the horizontal axis.
+- Cross Axis - cross axis start / cross axis end - This axis is perpendicular to the axis of the main axis
+-->
+<h3>
+    Flexbox Layout
+</h3>
+<div class="parent-container">
+    <div class="box box-1">
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eligendi modi odit quasi tempora?
+        Aspernatur expedita facilis maiores quas quasi? Commodi harum hic ipsa itaque iure laudantium possimus reiciendis vero.
+
+    </div>
+    <div class="box box-2">
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi consequatur corporis dolor earum eligendi
+        facilis laboriosam libero nisi nostrum officia pariatur, possimus quidem repellat repellendus sint sunt ut vero.
+
+    </div>
+    <div class="box box-3">
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur aut commodi consectetur, cupiditate deleniti
+        sunt? Architecto dolore doloremque, ducimus earum eum facilis itaque, officiis placeat quasi quia ut voluptatibus.
+
+    </div>
+    <div class="box box-4">
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequuntur eius eum ex,
+        ipsum iure magni tempora vitae. Animi asperiores culpa, eos magni neque obcaecati ratione rerum voluptate?
+
+    </div>
+    <div class="box box-5">
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequuntur eius eum ex,
+        ipsum iure magni tempora vitae. Animi asperiores culpa, eos magni neque obcaecati ratione rerum voluptate?
+
+    </div>
+    <div class="box box-5">
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto asperiores consequuntur eius eum ex,
+        ipsum iure magni tempora vitae. Animi asperiores culpa, eos magni neque obcaecati ratione rerum voluptate?
+
+    </div>
+</div>
+
+<!--
+ A useful guide to flexbox that you can refer back on later is referenced below:
+ https://jonitrythall.com/assets/flexboxfieldguide.pdf
+-->
+</body>
+</html>

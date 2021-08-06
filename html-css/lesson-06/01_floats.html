@@ -1,0 +1,123 @@
+<!--
+  In this example we will take a look at the float css property and how its useful in certain situations
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Floats</title>
+    <style>
+        .non-float {
+            border: 1px solid #123456;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .box-normal {
+            width: 150px;
+            height: 100px;
+            border-radius: 5px;
+            background-color: rgb(207, 232, 220);
+            padding: 1em;
+        }
+
+        .float-element {
+            border: 1px solid #400;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .box-float {
+            float: left;
+            margin-right: 10px;
+            width: 150px;
+            height: 100px;
+            border-radius: 5px;
+            background-color: rgb(207, 232, 220);
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+<!-- Take a quick look at the below example - here we have a parent container, holding a div box and some text. There are all
+ block elements and hence end up getting laid one after the other as is the case of normal flow layout.
+ -->
+
+<h1>Simple float example</h1>
+
+<div class="non-float">
+    <div class="box-normal">Float</div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+        vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+        ultricies tellus laoreet sit amet. </p>
+
+    <p>Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+        Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat.
+        Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+        luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+
+    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere
+        sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+        tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+        urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+<!--
+    Now let us look at another container element which has a box and a number of paragraphs. Ideally these elements
+    would have been laid out one after the other. However, for the .box-float element we have set float: left, by which we
+    basically tell the browser to float out the element from the normal flow of elements and push it to the left side of the parent
+    container - which in  this case is the div float-element
+-->
+<div class="float-element">
+    <div class="box-float">Float</div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+        vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+        ultricies tellus laoreet sit amet. </p>
+
+    <p>Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+        Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat.
+        Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+        luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+
+    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere
+        sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+        tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+        urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+<br><br>
+<!-- In the below example, we reduced the lines of text that are displayed in float-element. Now what has happened is
+given that the p tag is the only thing in the normal flow layout, the actual wrapper container size is dependent on the
+height of the P element. The box which is floating is above the normal layout and hence does not affect the height of the parent
+container
+-->
+<div class="float-element">
+    <div class="box-float">Float</div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+        vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+        ultricies tellus laoreet sit amet. </p>
+</div>
+<br><br>
+<!--
+Now given the height issue that we saw in previous snippet, how do we fix it? We can use the clear css property to
+overcome this issue, like below:
+-->
+<div class="float-element">
+    <div class="box-float">Float</div>
+    <!--  Using the clear css property, we can tell this p tag to clear the float element on the left hand side and start
+          laying out normally after that. Ofcourse, this is to be done, only if you want to layout that way, otherwise, you can have the paragraph
+          be on the RHS of the floating box.
+
+          clear takes left, right, both to signify which float element has to be cleared
+      -->
+    <p style="clear:left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+        vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+        ultricies tellus laoreet sit amet. </p>
+</div>
+
+</body>
+</html>

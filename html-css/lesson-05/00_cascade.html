@@ -1,0 +1,73 @@
+<!-- In this code snippet, we will take a look at code examples that explain to us how a browser
+  decides when there are competing styles to be applied.
+
+  So far, we have defined html elements, selected those html elements through various css selectors and applied
+  a few styles on them via various means.
+
+  However, if you've noticed before there were certain situations, a certain css rule that you defined for an element
+  may not have taken effect. Typically, the issue arises, when there are 2 conflicting rules are applied to a css element
+  and 1 of them takes effect (and not the other).
+  The cascade & specificity mechanisms will determine which rules are applied when there is a conflict. Another related concept
+  that we will try to understand is inheritance wherein an element will inherit certain CSS properties from its parent element,
+  which may affect how the element finally looks and what css properties it has.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascade & Inheritance</title>
+
+    <!-- Lets reference an external style sheet for our experimentation -->
+    <link rel="stylesheet" href="cascade-styles.css">
+</head>
+<body>
+
+<!--
+    lets take a quick look at what we are gonna learn better with the help of an example
+    Take a look at the applied css in the external style sheet attached with this file
+-->
+<div class="example">
+    <span class="first-element">This is the first element under example</span>
+    <span class="second-element">This is the second element under example</span>
+</div>
+
+
+<!--
+    quick example to explain how the cascade aspect of css works
+-->
+
+<div class="example-two">
+    <h1>This is my heading for cascade test</h1>
+</div>
+
+
+<!--
+    quick example to explain how specificity in css works
+-->
+
+<div class="example-three">
+    <h3>This is another heading</h3>
+    <h3 class="big">Heading with class of big</h3>
+    <h3 class="dark">Heading with class of dark</h3>
+</div>
+
+
+<!--
+    quick example to explain !important
+-->
+<div class="example-four">
+    <h4>This is also a heading</h4>
+    <h4 class="imp-el">Heading with a class applied</h4>
+</div>
+
+<!--
+
+
+-->
+<div class="inheritance">
+    <div class="ele-1">Example for inheritance</div>
+</div>
+</body>
+</html>

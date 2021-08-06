@@ -1,0 +1,38 @@
+h3 {
+    color: black;
+    font-size: 2rem;
+}
+
+/* Below styles are applied when the page is being printed, hence the media type of print */
+@media print {
+    h3 {
+        color: red;
+        font-size: 16px;
+    }
+}
+
+/* Below styles are applied when the media type is screen and upto a max-width of 479px */
+@media screen and (max-width: 480px ) {
+    h3 {
+        color: yellow;
+        font-size: 1rem;
+    }
+}
+
+/* Below styles are applied when the media type is screen and between widths of 480px and 960px
+Note the use of the and operator to combine rules
+*/
+@media screen and (min-width: 480px) and (max-width: 960px){
+    h3 {
+        color: green;
+        font-size: 2rem;
+    }
+}
+
+/* Below styles are applied when the media type is screen and widths of atleast 961px */
+@media screen and (min-width: 960px){
+    h3 {
+        color: pink;
+        font-size: 4rem;
+    }
+}

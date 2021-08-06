@@ -1,0 +1,42 @@
+<!--
+    A typical HTML5 file has 4 major tags in them always
+    - The doctype tag at the top of the file
+    - The html tag
+    - The head tag
+    - The body tag
+-->
+
+<!--
+    Pre HTML5, the doctype tag was used to tell the browser what set of rules were to be followed when parsing the HTML file
+    But with HTML5, this has been simplified a lot.
+    In modern browsers in the HTML5 world, this tag basically lets the browsers know whether to run in Standards mode or Quirks mode.
+    We want standards mode as they sticks to standard HTML specification process. Quirks mode, is well quirky.
+
+    For full list of quirky behavior, see here - https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_quirks_mode_behavior
+ -->
+<!DOCTYPE html>
+
+<!--
+    The HTML tag is the root element of a HTML page. It has no other parent.
+    Every doc has one HTML tag and only one.
+
+    It has the lang attribute which informs screen readers about the language of the page. Its not compulsory, but advisable.
+ -->
+<html lang="en">
+<!--
+    The head tag is also another element which is only one in a HTML page.
+    Typically it contains things which are necessary to the page but not exactly displayed to the user. Things like stylesheets, styles,
+    metadata information, title of page and so on are present here.
+ -->
+<head>
+    <!-- We will see more details about the tag contents in subsequent code snippets. Refer 02_head.html in this module   -->
+    <meta charset="UTF-8">
+    <title>Intro</title>
+</head>
+<!--
+    The body tag contains all the content of the HTML page - the text, images, and everything else.
+ -->
+<body>
+    <p>Hello world! Welcome to this training module</p>
+</body>
+</html>

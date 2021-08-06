@@ -1,0 +1,152 @@
+/*
+We define a rule wherein all first-element and second-element class elements will have text of blue color.
+We then went ahead and defined a rule which says all first-element class element under the example class element will be red in color.
+
+Now basically for the text in first-element we have 2 color possibilities - red and blue.
+If you open the file in your browser, you will see that the first element has red color text and not blue color text.
+How and why this happens is what is determined by cascade and specificity (along with inheritance in some situations)
+
+*/
+.first-element, .second-element {
+    color: blue
+}
+
+.example .first-element {
+    color: red;
+}
+
+/*
+Cascade
+- Basic idea is that order of CSS rules matter
+- when there are 2 rules of same specificity (we will come to what is specificity in just a bit), the rule declared last
+will be used
+
+In the below example, we have 2 rules applied for the same h1 element present under a particular class. Given all other things to be equal,
+the rule which is defined last will be applied as per cascade. In this case, the h1 element will have a text color of yellow.
+*/
+
+.example-two h1 {
+    color: green;
+}
+
+.example-two h1 {
+    color: yellow;
+}
+
+/*
+Specificity
+- Specificity is how a browser which rule to apply to an element, when there are multiple rules defined in a css but
+they all match to the same element
+- Given multiple selectors defined in a css file all matching to the same element, there will be some selectors that are said
+to be more specific and some selectors that are less specific
+- The more specific selectors will have higher precedence than the less specific selectors in case of conflicts of rules for an
+element
+
+Remember this basic rule below as a rule of thumb:
+ID selectors > Class selectors === pseudo-classes > type/element selectors
+
+Check out these websites - https://specifishity.com/, https://cssspecificity.com/-  for a cheatsheet on specificity of all selectors.
+Its ok if you cant remember all these rules in the beginning as you get comfortable working with html and css, you'll slowly
+pick these rules up and it'll become second nature to you.
+
+Now lets take a look at few examples to understand specificity better
+
+Specificity is computed by the browser below on the basis of certain rules
+
+We already know that an element selector has low specificity and can be overwritten by a class. Essentially a value
+in points is awarded to different types of selectors, and adding these up gives you the weight of that particular selector,
+ which can then be assessed against other potential matches.
+
+The amount of specificity a selector has is measured using four different values (or components), which can be thought
+of as thousands, hundreds, tens, and ones — four single digits in four columns:
+
+Thousands: Score one in this column if the declaration is inside a style attribute, aka inline styles. Such declarations
+        don't have selectors, so their specificity is always 1000.
+Hundreds: Score one in this column for each ID selector contained inside the overall selector.
+Tens: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
+Ones: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
+
+
+h1                                      ===========> 0-0-0-1
+h1 + p::first-child                     ===========> 0-0-0-3
+li > a[href*="en-US"] > .inline-warning ===========> 0-0-2-2
+#identifier                             ===========> 0-1-0-0
+
+*/
+
+/*
+
+In the example below, we have a few h3 tags - the first rule is applicable for all h3 tags defined within .example-three
+The next 2 .big and .dark selectors are apply specific overrides only for those elements within .example-three which have those
+classes.
+*/
+/* 0-0-1-1 */
+.example-three h3 {
+    font-size: 16px;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 0-0-2-0
+Has higher specificity, so font-size 32x is applied over 16px
+*/
+
+.example-three .big {
+    font-size: 32px;
+}
+
+/* 0-0-2-0
+Has higher specificity, so color brown is applied over #000
+*/
+.example-three .dark {
+    color: brown;
+}
+
+/*
+
+Now given we've spoken about specificity, we should also talk about !important. !important is a style declaration that can be applied
+to a css rule which will override all other declarations.
+In general, its not good practice to use !importance as it interferes with the natural rules of cascade.
+
+Note: If there are tie breakers between 2 rules having !important, then the the rule with the higher
+specificity will take precedence.
+
+*/
+/* 0-0-1-1 */
+.example-four h4 {
+    color: #123456;
+    font-size: 24px !important;
+}
+/* 0-0-2-0
+Ideally given the higher specificity of this selector, the text should be 48px big
+but its not because the !important from the prev selector has taken precedence.
+*/
+.example-four .imp-el {
+    font-size: 48px;
+}
+
+
+/*
+One last thing to keep in mind is this - styles declared in external stylesheets will be overriden by styles in internal stylesheets
+which will be overriden by the inline styles.
+
+inline styles > internal stylesheets > external stylesheets
+
+Will leave this an exercise for you try and see how the behavior happens
+
+*/
+
+/*
+Another aspect of CSS that we need to understand is inheritance
+Basically what it means is there are some css property values set on a parent element that are inherited
+by the child elements within the parent.
+
+Properties like font-family, color are inherited
+Properties like width, padding, are not inherited
+
+*/
+
+.inheritance {
+    border: 1px solid black;
+    color: pink;
+}

@@ -1,0 +1,95 @@
+/*  This file has examples for Type selectors, ID selectors, Class selectors, Universal Selectors */
+
+/*
+    lets say we want to style the text of the header and the paragraph tags to be a shade of green.
+    We can obviously individually declare each selector for the elements one after the other.
+ */
+
+/*  Commented out this code, its just for reference for whats possible */
+h1 {
+    color: darkgreen;
+}
+
+p {
+    color: darkgreen;
+}
+
+/*
+    Or we can also combine the 2 selectors together like seen nextcalc
+    How do this is we write down the list of selectors, one after the other, seperated by commas. We then declare the rules
+    that are applicable for those selectors like we did before.
+*/
+h1, p {
+    color: darkgreen;
+}
+
+/* Type selector
+
+It allows us to apply css rules on the basis of a type of html element. It could be a div or a span or a h1.
+
+In the below example, we apply a certain font family and size on the body tag. What this means is the rules are applicable on the body tag and
+all the elements that are present within the body tag.
+
+Question to think about: We applied a style on the body tag, but we just saw that its applied on all elements within body.
+How is that possible? We will know the answer to this in our subsequent lessons.
+*/
+
+body {
+    font-family: "Comic Sans MS", Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+/* Class selector
+It allows to target certain classes defined in the html or rather the element which holds that class name via the class attr.
+These selectors start with a dot (.)
+Question: We had already set a color of darkgreen for all p tags via css above. Now we are setting a color of red for the content class.
+Given that there is a p tag with the content class, which color is applied? green or red? We will know more about this in our subsequent lessons.
+*/
+
+.content {
+    color: red;
+}
+
+/*
+You can also target specific elements that have the class set on them. In this case, it allows to target all h1 elements
+which have a class called highlight set on them
+*/
+
+h1.highlight {
+    background-color: yellow;
+}
+
+/*
+    Via the same class selector, we can target an element that has more than 1 class applied on it.
+    In this case, we have a class notebook which has a particular style. However for elements that have a notebook and a warning class
+    a different list of styles are applied.
+*/
+
+.notebox {
+    border: 4px solid #666;
+    padding: 4px;
+}
+
+.notebox.warning {
+    border-color: orange;
+    font-weight: bold;
+}
+
+
+/* ID Selector
+
+It allows us to target certain elements on the basis of the ID value it holds
+*/
+
+#first-para {
+    background-color: lightblue;
+}
+
+/* Universal selector
+A selector which selects all elements on the HTML page. Quite straight-forward this one.
+*/
+
+* {
+    color: black;
+}
