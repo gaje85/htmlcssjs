@@ -6,8 +6,10 @@ body {
     /* Try commenting this property below to see how it lays out normally */
     /* Then try leaving this one flex property alone and comment out all other flex properties to understand what happens */
     display: flex;
-    flex-direction: row; /* flex-direction: row is the default for flex layouts, try setting to column to see how it changes behavior */
-    flex-wrap: wrap; /* Try setting this to wrap/nowrap along with a specific width in the .box element, you can also toggle the flex-direction from row to column to see what else changes*/
+    /* flex-direction: row is the default for flex layouts, try setting to column to see how it changes behavior */
+    flex-direction: row;
+    /* Try setting this to wrap/nowrap along with a specific width in the .box element, you can also toggle the flex-direction from row to column to see what else changes */
+    flex-wrap: wrap;
 }
 
 .box {

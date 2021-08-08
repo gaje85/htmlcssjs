@@ -68,7 +68,7 @@ Ones: Score one in this column for each element selector or pseudo-element conta
 
 
 h1                                      ===========> 0-0-0-1
-h1 + p::first-child                     ===========> 0-0-0-3
+h1 + p::first-child                     ===========> 0-0-1-2
 li > a[href*="en-US"] > .inline-warning ===========> 0-0-2-2
 #identifier                             ===========> 0-1-0-0
 
@@ -127,8 +127,8 @@ but its not because the !important from the prev selector has taken precedence.
 
 
 /*
-One last thing to keep in mind is this - styles declared in external stylesheets will be overriden by styles in internal stylesheets
-which will be overriden by the inline styles.
+One last thing to keep in mind is this - styles declared in external stylesheets will be overridden by styles in internal stylesheets
+which will be overridden by the inline styles.
 
 inline styles > internal stylesheets > external stylesheets
 

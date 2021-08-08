@@ -57,8 +57,7 @@ left, right, top, bottom properties will appear as normal
     <p class="dummy-relative-pos">This element has been positioned relative but with no other properties set on it, hence
     it behaves like a statically positioned element</p>
 
-    <!-- The top and left properties that are set will push the element 30px from the top and left of the parent container.
-    The parent container in this case is .rel-pos
+    <!-- The top and left properties that are set will push the element 30px from the top and left of its original position in a static layout.
     -->
     <p class="relative-pos">
         This element has been positioned relative with a some values set for top and left properties.
@@ -80,8 +79,8 @@ and instead sits in its own layer separate from everything else. Now this elemen
 as determined by the combination of top/left/right/bottom css properties that are set on the element.
 
 An absolutely positioned element is placed depending on the position property of the ancestor element. If there is no explicit position
-property in any ancestor element, then that means they are all statically positioned. So in such cases, the element is placed relative to the initial view port
-that is visible.
+property in any ancestor element, then that means they are all statically positioned. So in such cases, the element is placed relative to the
+initial view port that is visible.
 
 This behavior can be tweaked further by setting position:relative to any of the ancestor elements that contains this absolutely placed
 element. These two points are key differentiators against fixed positioning.
