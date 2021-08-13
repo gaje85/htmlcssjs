@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM APIs</title>
+    <script src="dom.js" defer></script>
+</head>
+<body>
+    <h2 id="header-el" class="header-class">DOM - Document Object Model</h2>
+    <!--
+        Web browsers have numerous global objects that are made available to the JS code. Most important ones are
+        - window - The window object is a representation of the current browser window - granting access to various methods related
+        the window under consideration
+        - document - The document object which represents the actual HTML page loaded in the window in JS. Allows us to manipulate the
+        HTML/CSS of the document, thereby affecting the document/page itself.
+
+       So what is this DOM
+       - DOM stands for Document Object Model - it is essentially a virtual representation of the rendered HTML page (including the HTML & CSS applied)
+       - It provides a tree structure of the HTML page - making it easy to access from other programming languages
+       - Since it is now easy access from a programming language like JS, we can easily manipulate it programmatically
+       - Utility to see how the DOM looks like for a page - https://software.hixie.ch/utilities/js/live-dom-viewer
+       - DOM is made up of Nodes and the their attributes
+            - Root node - basically the top most node of a tree - typically HTML for a HTML page
+            - Parent node - a node which contains a 1 or more nodes inside it
+            - Child node - a node which is directly or immediately within another node
+            - Descendant node - a node that is anywhere within another node. A child node is a descendant node but a descendant node is not
+            necessarily a child node.
+            - Text node - A node containing string text
+    -->
+    <div>
+        <img src="indian-flag.png" alt="The Indian National Flag">
+        <p>Link to <a href="https://www.google.co.in/">Google's homepage</a></p>
+    </div>
+
+</body>
+
+</html>
