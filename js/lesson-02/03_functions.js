@@ -29,15 +29,11 @@ function sum(numberOne, numberTwo) {
 **/
 
 let difference = function (numberOne, numberTwo) {
-  if(numberOne === 100) throw new Error("Asdasdasd");
+  // Uncomment the code next line to see a stack trace to understand how the name of function changes in it
+  // if(numberOne === 100) throw new Error("Asdasdasd");
   return numberOne - numberTwo;
 };
 
-
-difference = function diff(numberOne, numberTwo) {
-  if(numberOne === 100) throw new Error("Asdasdasd");
-  return numberOne - numberTwo;
-};
 
 /*
 *  Calling a function or invoking a function

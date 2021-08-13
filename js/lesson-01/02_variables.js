@@ -39,7 +39,7 @@ var employeeAge = 35;
 * */
 
 /*
-* There are 2 scopes in JS
+* There are 3 scopes in JS
 * - Global Scope
 * - Function Scope
 * - Block Scope

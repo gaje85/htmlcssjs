@@ -10,8 +10,8 @@ through means of Nodejs
 - Has nothing to do with the Java programming language (even if there is the word Java in JavaScript)
 - Started life as primarily UI glue, for performing actions that HTML/CSS could not but is now widely used
 in web application development. If anything a lot of websites wont work with JS! (Whether that is good or bad is something to be discussed!)
-- Loosely typed - meaning you dont have know or set the types of variables when you declare them
-- Dynamically typed - 
+- Loosely typed, dynamically typed - once a type has been set for a variable, it can be changed later, typically this is known at run time for JS, when the code is run.
+Also, depending on the situation of where the variable is used, the variable may mean different things.
 
 ## What is ECMA & ECMAScript
 - ECMA stands for European Computer Manufacturers Association
@@ -34,10 +34,10 @@ language specification
   - SpiderMonkey - Used in Firefox, another old JS engine and widely used due to Firefox's userbase
   
 ## Interpreted or Just-In-Time Compiled
-In general it is said that JS is an interpreted language. What that means is JS code is converted to machine code on the fly
+In general, it is said that JS is an interpreted language. What that means is JS code is converted to machine code on the fly
 as the browser tries to execute the code
 - Its a lot simpler for developers as their just runs with no extra steps to be done
-- However, its not necessarily the most performant
+- However, it's not necessarily the most performant
 In recent years, browsers have gone ahead with JIT compilation of JS. What this means is the code is compiled just as it is 
 run into byte code. That byte code is then run/executed by the browser. 
 - Code can be better optimized this way, as the byte code can have performance improvements for a particular platform
