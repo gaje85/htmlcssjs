@@ -6,7 +6,7 @@ through means of Nodejs
 - Is typically interpreted but can be JIT (Just-In-Time compiled as well)
 - Supports both programming styles
     - imperative style - where you tell exactly how a certain operation is to be done
-    - functional style - where you tell what has to be done, and the operation is done for you
+    - declarative style - where you tell what has to be done, and the operation is done for you
 - Has nothing to do with the Java programming language (even if there is the word Java in JavaScript)
 - Started life as primarily UI glue, for performing actions that HTML/CSS could not but is now widely used
 in web application development. If anything a lot of websites wont work with JS! (Whether that is good or bad is something to be discussed!)
