@@ -35,7 +35,7 @@ function createEmployeeObj(name, age) {
   emp.name = name;
   emp.age = age;
   emp.getDetails = function () {
-    return `Hi, My name is ${obj.name}. I am ${obj.age} years old`;
+    return `Hi, My name is ${emp.name}. I am ${emp.age} years old`;
   }
   return emp;
 }

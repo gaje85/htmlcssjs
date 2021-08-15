@@ -108,7 +108,7 @@ fruitList.shift();
 **/
 
 fruitList.indexOf('apple');
-fruitList.contains('apple');
+fruitList.includes('apple');
 
 /*
 * Array.sort
